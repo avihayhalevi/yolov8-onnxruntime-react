@@ -61,7 +61,7 @@ Use another YOLOv8 model.
    model = YOLO("yolov8n.pt")  # load an official model
 
    # Export the model
-   model.export(format="onnx")
+   model.export(format="onnx"git init)
    ```
 
 2. Copy `yolov8*.onnx` to `./public/model`
