@@ -1,6 +1,6 @@
 {
-  "name": "yolov8-onnxruntime-react",
-  "homepage": "https://avihayhalevi.github.io/yolov8-onnxruntime-react/",
+  "name": "yolov8-react",
+  "homepage": "https://avihayhalevi.github.io/yolov8-react/",
   "version": "0.1.0",
   "dependencies": {
     "@techstark/opencv-js": "4.5.5-release.2",
@@ -34,15 +34,15 @@
   },
   "author": {
     "name": "avihay Halevi",
-    "url": "https://github.com/avihayhalevi/yolov8-onnxruntime-react"
+    "url": "https://github.com/avihayhalevi/yolov8-react"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avihayhalevi/yolov8-onnxruntime-react.git"
+    "url": "git+https://github.com/avihayhalevi/yolov8-react.git"
   },
   "bugs": {
-    "url": "https://github.com/avihayhalevi/yolov8-onnxruntime-react/issues"
+    "url": "https://github.com/avihayhalevi/yolov8-react/issues"
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",
