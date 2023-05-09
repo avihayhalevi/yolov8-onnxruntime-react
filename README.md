@@ -1,7 +1,7 @@
 # YOLOv8 with onnxruntime-web
 
 <p align="center">
-  <img src="./sample.jpg" />
+  <img src="./sample.png" />
 </p>
 
 ![love](https://img.shields.io/badge/Made%20with-🖤-white)

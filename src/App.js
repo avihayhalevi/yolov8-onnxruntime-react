@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import cv from "@techstark/opencv-js";
 import { Tensor, InferenceSession } from "onnxruntime-web";
 import Loader from "./components/loader";
@@ -19,6 +19,16 @@ const App = () => {
   const topk = 100;
   const iouThreshold = 0.45;
   const scoreThreshold = 0.2;
+
+  useEffect(() => {
+    console.log(loading)
+    if (!loading){
+        const url = `${process.env.PUBLIC_URL}/img/1.jpeg`
+        console.log(url)
+        imageRef.current.src = url;
+        setImage(url);
+    }
+  }, [loading]);
 
   // wait until opencv.js initialized
   cv["onRuntimeInitialized"] = async () => {
@@ -48,11 +58,7 @@ const App = () => {
       <div className="header">
         <h1>YOLOv8 Object Detection App</h1>
         <p>
-          YOLOv8 object detection application live on browser powered by{" "}
-          <code>onnxruntime-web</code>
-        </p>
-        <p>
-          Serving : <code className="code">{modelName}</code>
+          YOLOv8 object detection application live on browser
         </p>
       </div>
 
@@ -100,6 +106,113 @@ const App = () => {
         }}
       />
       <div className="btn-container">
+      <button
+            onClick={() => {
+            // handle next image to detect
+          if (image) {
+            URL.revokeObjectURL(image);
+            setImage(null);
+          }
+
+          const url = `${process.env.PUBLIC_URL}/img/1.jpeg`
+            console.log(url)
+            imageRef.current.src = url;
+            setImage(url);
+
+            }}
+          >
+           <img 
+              alt=''
+              height="100px"
+              src ={`${process.env.PUBLIC_URL}/img/1.jpeg`}
+           />
+          </button>
+          <button
+            onClick={() => {
+            // handle next image to detect
+          if (image) {
+            URL.revokeObjectURL(image);
+            setImage(null);
+          }
+
+          const url = `${process.env.PUBLIC_URL}/img/2.jpeg`
+            console.log(url)
+            imageRef.current.src = url;
+            setImage(url);
+
+            }}
+          >
+           <img 
+              alt=''
+              height="100px"
+              src ={`${process.env.PUBLIC_URL}/img/2.jpeg`}
+           />
+          </button>
+          <button
+            onClick={() => {
+            // handle next image to detect
+          if (image) {
+            URL.revokeObjectURL(image);
+            setImage(null);
+          }
+
+          const url = `${process.env.PUBLIC_URL}/img/3.jpeg`
+            console.log(url)
+            imageRef.current.src = url;
+            setImage(url);
+
+            }}
+          >
+           <img 
+              alt=''
+              height="100px"
+              src ={`${process.env.PUBLIC_URL}/img/3.jpeg`}
+           />
+          </button>
+          <button
+            onClick={() => {
+            // handle next image to detect
+          if (image) {
+            URL.revokeObjectURL(image);
+            setImage(null);
+          }
+
+          const url = `${process.env.PUBLIC_URL}/img/6.jpeg`
+            console.log(url)
+            imageRef.current.src = url;
+            setImage(url);
+
+            }}
+          >
+           <img 
+              alt=''
+              height="100px"
+              src ={`${process.env.PUBLIC_URL}/img/6.jpeg`}
+           />
+          </button>
+          <button
+            onClick={() => {
+            // handle next image to detect
+          if (image) {
+            URL.revokeObjectURL(image);
+            setImage(null);
+          }
+
+          const url = `${process.env.PUBLIC_URL}/img/4.jpg`
+            console.log(url)
+            imageRef.current.src = url;
+            setImage(url);
+
+            }}
+          >
+           <img 
+              alt=''
+              height="100px"
+              src ={`${process.env.PUBLIC_URL}/img/4.jpg`}
+           />
+          </button>
+      </div>
+      <div className="btn-container">
         <button
           onClick={() => {
             inputImage.current.click();
@@ -107,19 +220,6 @@ const App = () => {
         >
           Open local image
         </button>
-        {image && (
-          /* show close btn when there is image */
-          <button
-            onClick={() => {
-              inputImage.current.value = "";
-              imageRef.current.src = "#";
-              URL.revokeObjectURL(image);
-              setImage(null);
-            }}
-          >
-            Close image
-          </button>
-        )}
       </div>
     </div>
   );
