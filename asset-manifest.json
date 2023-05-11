@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/yolov8-react/static/css/main.4869d7e6.css",
-    "main.js": "/yolov8-react/static/js/main.58142406.js",
+    "main.js": "/yolov8-react/static/js/main.b31ecc6e.js",
     "static/js/ort-wasm-simd.wasm": "/yolov8-react/static/js/ort-wasm-simd.wasm",
     "static/js/ort-wasm-simd-threaded.wasm": "/yolov8-react/static/js/ort-wasm-simd-threaded.wasm",
     "static/js/ort-wasm.wasm": "/yolov8-react/static/js/ort-wasm.wasm",
     "static/js/ort-wasm-threaded.wasm": "/yolov8-react/static/js/ort-wasm-threaded.wasm",
     "index.html": "/yolov8-react/index.html",
     "main.4869d7e6.css.map": "/yolov8-react/static/css/main.4869d7e6.css.map",
-    "main.58142406.js.map": "/yolov8-react/static/js/main.58142406.js.map"
+    "main.b31ecc6e.js.map": "/yolov8-react/static/js/main.b31ecc6e.js.map"
   },
   "entrypoints": [
     "static/css/main.4869d7e6.css",
-    "static/js/main.58142406.js"
+    "static/js/main.b31ecc6e.js"
   ]
 }
